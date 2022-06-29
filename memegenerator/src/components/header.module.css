@@ -1,0 +1,36 @@
+.header-container {
+  background: var(--bkg);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo {
+  width: 30px;
+  height: 30px;
+  margin: 0.5rem 1rem;
+}
+.titel {
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+.header-right {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+/*Media queries*/
+
+@media (max-width: 425px) {
+  .titel {
+    font-size: 1rem;
+  }
+}

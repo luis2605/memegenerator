@@ -1,7 +1,21 @@
 import React from "react";
 import classes from "./inputForm.module.css";
 
-const InputForm = () => {
+const InputForm = (props) => {
+  const textAboveChangeHandler = (event) => {
+    props.onChangeTextAbove(event.target.value);
+  };
+
+  const textBelowChangeHandler = (event) => {
+    props.onChangeTextBelow(event.target.value);
+  };
+
+  const changeMeme = () => {
+    const memeIndex = Math.floor(Math.random() * (99 - 0) + 0);
+    props.onChangeMemeIndex(memeIndex);
+    console.log(memeIndex);
+  };
+
   return (
     <div className={classes.container}>
       <form>
@@ -10,6 +24,7 @@ const InputForm = () => {
             id="input-above"
             type="text"
             placeholder=" 1. text hier eingeben"
+            onChange={textAboveChangeHandler}
           ></input>
         </label>
         <label htmlFor="input-below">
@@ -17,10 +32,11 @@ const InputForm = () => {
             id="input-below"
             type="text"
             placeholder=" 2. text hier eingeben"
+            onChange={textBelowChangeHandler}
           ></input>
         </label>
       </form>
-      <button className={classes.btn} type="submit">
+      <button className={classes.btn} type="submit" onClick={changeMeme}>
         {" "}
         Ein neues Bild abrufen 🖼
       </button>

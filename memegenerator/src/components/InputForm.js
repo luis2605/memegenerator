@@ -38,7 +38,7 @@ const InputForm = (props) => {
       </form>
       <button className={classes.btn} type="submit" onClick={changeMeme}>
         {" "}
-        Ein neues Bild abrufen 🖼
+        Ein neues Bild abrufen
       </button>
     </div>
   );

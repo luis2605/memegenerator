@@ -37,6 +37,7 @@ input {
     justify-content: space-evenly;
   }
   input {
-    padding: 0.5em 0;
+    padding: 0.5em;
+    width: 90%;
   }
 }

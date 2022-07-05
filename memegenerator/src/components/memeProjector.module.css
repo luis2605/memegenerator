@@ -3,17 +3,20 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  z-index: 1;
 }
 
 .text-above {
-  font-size: 2rem;
-  color: whitesmoke;
+  font-size: 1rem;
+  color: black;
   text-shadow: 2px 2px 4px #000000;
-  margin: 0;
+  margin: 0 auto;
   padding: 0.3em 0.5em;
   border-radius: 5px;
-  background: var(--bkg);
+  background: white;
   opacity: 0.9;
+  max-width: 300px;
+  word-wrap: break-word;
 }
 
 .text-below {
@@ -26,30 +29,143 @@
   border-radius: 5px;
   background: var(--bkg);
   opacity: 0.9;
+  max-width: 300px;
 }
 
 .img {
   max-width: 500px;
-  max-height: 333px;
+  height: 333px;
+  width: 80%;
+
+  align-self: center;
+  z-index: 2;
+}
+
+.textContainer {
+  max-width: 500px;
+  height: 333px;
+  z-index: 10;
   width: 80%;
   align-self: center;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    " topleft topcenter topcenter1 topright"
+    " mediumleft mediumcenter mediumcenter1 mediumright"
+    "bottomleft bottomcenter bottomcenter1 bottomright";
 }
 /* auxiliary classes*/
 .invisible {
   display: none;
 }
 
-.left-white-side {
-  font-size: 0.8rem;
-  color: black;
-  text-shadow: 2px 2px 4px #000000;
-  margin: 0;
-  padding: 0.3em 0.5em;
-  border-radius: 5px;
-  opacity: 0.9;
+/*meme containers*/
+.textContainerMeme0 {
+  max-width: 500px;
+  height: 333px;
+  z-index: 10;
+  width: 80%;
+  align-self: center;
   position: absolute;
-  left: 50vw;
-  width: 135px;
-  height: 200px;
-  word-wrap: break-word;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    " topleft  topright"
+    "bottomleft bottomright";
+}
+
+/*meme inputs*/
+p {
+  margin: 1.5em auto;
+  text-align: center;
+  word-break: break-word;
+}
+.meme0Input1 {
+  grid-area: topright;
+
+  word-break: break-word;
+}
+.meme0Input2 {
+  grid-area: bottomright;
+
+  word-break: break-word;
+}
+.meme1Input1 {
+  grid-area: topleft;
+  font-size: 0.5rem;
+  margin: 4em 0 0 0.5em;
+  transform: rotate(-9deg);
+}
+.meme1Input2 {
+  grid-area: topright;
+  font-size: 0.6rem;
+  margin: 3em 0 0 -11.5em;
+  transform: rotate(-9deg);
+}
+
+.meme5Input1 {
+  grid-area: bottomright;
+  margin-top: 3em;
+  margin-right: 4em;
+  transform: rotate(-9deg);
+}
+.meme2Input1 {
+  grid-area: topleft;
+}
+
+.meme2Input2 {
+  grid-area: topright;
+}
+.meme4Input1 {
+  grid-area: bottomleft;
+  margin-top: 5em;
+}
+
+.meme4Input2 {
+  grid-area: bottomright;
+  margin-top: 5em;
+}
+
+.meme3Input1 {
+  grid-area: topright;
+  margin: 2em 0 2em 3em;
+  font-size: 0.8rem;
+}
+.meme3Input2 {
+  grid-area: bottomright;
+  margin: 2em -2px 5em 8em;
+  font-size: 0.7rem;
+}
+
+.meme6Input1 {
+  grid-area: topleft;
+  margin: 0 0 11em 6.1em;
+  color: whitesmoke;
+  font-size: 0.7rem;
+  background-color: #15484b;
+  border: 2px solid #71828b;
+  border-radius: 5px;
+}
+.meme6Input2 {
+  grid-area: topright;
+  margin: 3em 5em 0 0.5em;
+  color: whitesmoke;
+}
+.meme7Input1 {
+  grid-area: topleft;
+  font-size: 0.8rem;
+  margin: 7em 0.5em -1em 4.5em;
+  transform: rotate(20deg);
+  color: #372824;
+}
+.meme8Input1 {
+  grid-area: topleft;
+  font-size: 0.8rem;
+}
+.meme8Input2 {
+  grid-area: topright;
+  font-size: 0.8rem;
 }

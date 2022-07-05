@@ -11,7 +11,7 @@ const InputForm = (props) => {
   };
 
   const changeMeme = () => {
-    const memeIndex = Math.floor(Math.random() * (99 - 0) + 0);
+    const memeIndex = Math.floor(Math.random() * (10 - 0) + 0);
     props.onChangeMemeIndex(memeIndex);
     console.log(memeIndex);
   };
